@@ -1,0 +1,232 @@
+#!/bin/bash
+#This Script Was Made By @cyberghost
+
+clear
+
+printf "\e[0m\n"
+printf "\e[0;34m_________ _        _______  _______   \e[0m\e[0;32m     _______ _________ _        ______   _______  _______ \e[0m\n"
+printf "\e[0;34m\__   __/( (    /|(  ____ \(  ___  )  \e[0m\e[0;32m    (  ____ \\__   __/( (    /|(  __  \ (  ____ \(  ____ )\e[0m\n"
+printf "\e[0;34m   ) (   |  \  ( || (    \/| (   ) |  \e[0m\e[0;32m    | (    \/   ) (   |  \  ( || (  \  )| (    \/| (    )|\e[0m\n"
+printf "\e[0;34m   | |   |   \ | || (__    | |   | |  \e[0m\e[0;32m    | (__       | |   |   \ | || |   ) || (__    | (____)|\e[0m\n"
+printf "\e[0;34m   | |   | (\ \) ||  __)   | |   | |  \e[0m\e[0;32m    |  __)      | |   | (\ \) || |   | ||  __)   |     __)\e[0m\n"
+printf "\e[0;34m   | |   | | \   || (      | |   | |  \e[0m\e[0;32m    | (         | |   | | \   || |   ) || (      | (\ (   \e[0m\n"
+printf "\e[0;34m___) (___| )  \  || )      | (___) |  \e[0m\e[0;32m    | )      ___) (___| )  \  || (__/  )| (____/\| ) \ \__\e[0m\n"
+printf "\e[0;34m\_______/|/    )_)|/       (_______)  \e[0m\e[0;32m    |/       \_______/|/    )_)(______/ (_______/|/   \__/\e[0m\n"
+
+echo -e '
+       __________________________________________________________________________________________
+      |                                                                                         |
+      |  {@} Coded By CyberGhost                                                           {@}  |
+      |  {@} Youtube  - https://www.youtube.com/channel/UCcbkV_EimZpPihtVvGVcf_A/featured  {@}  |
+      |  {@} Github   - https://github.com/AnonymousAt3                                    {@}  |
+      |_________________________________________________________________________________________|
+
+                        >>>>>>>>>>>>>>>>   MENU   <<<<<<<<<<<<<<<<<<
+
+{1} My Ip
+{2} Track Ip
+{3} Find MAC Address Vendors
+{4} Look Up Website Information
+{5} Exit
+'
+echo -e -n  " \e[0;32m
+┌─[ Enter the your choice ]─[~]
+└──╼ # \e[0m "
+
+myip="1"
+trackip="2"
+mal="3"
+luwi="4"
+ex="5"
+
+read a
+if [ "$a" == "$myip" ]
+then
+clear
+
+echo
+
+echo -e '
+\e[1;5;34m
+  __  __ _  ____  __     ____  __  __ _  ____  ____  ____
+ (  )(  ( \(  __)/  \   (  __)(  )(  ( \(    \(  __)(  _ \
+  )( /    / ) _)(  O )   ) _)  )( /    / ) D ( ) _)  )   /
+ (__)\_)__)(__)  \__/   (__)  (__)\_)__)(____/(____)(__\_)
+                                                            \e[0m
+                                                         Coded By CyberGhost                                                           
+ '
+
+printf '      Ip             :       '
+      curl -s https://ipinfo.io/json | jq -r '.ip'
+printf '      Country        :       '
+      curl -s https://ipapi.co//json | jq -r  '.country_name'
+printf '      Region         :       '
+      curl -s https://ipapi.co//json | jq -r  '.region'
+printf '      City           :       '
+      curl -s https://ipapi.co//json | jq -r '.city'
+printf '      Postal Code    :       '
+      curl -s https://ipapi.co//json | jq -r  '.postal'
+echo
+
+printf '      Latitude       :       '
+      curl -s https://ipapi.co//json | jq -r  '.latitude'
+printf '      Longitude      :       '
+      curl -s https://ipapi.co//json | jq -r  '.longitude'
+
+echo
+printf '      Isp            :       '
+     curl -s https://ipinfo.io/ | jq -r  '.org'
+
+echo
+
+printf '      Timezone       :       '
+     curl -s https://ipinfo.io/json | jq -r '.timezone'
+printf '      Currency       :       '
+     curl -s https://ipapi.co//json | jq -r  '.currency'
+printf '      Calling code   :       '
+     curl -s https://ipapi.co//json | jq -r  '.country_calling_code'
+
+echo
+
+echo -e -n "\e[0;31mReturn To  Menu (Press Enter)\e[0m  "
+read yes
+
+./infofinder
+
+
+read a
+  elif [ "$a" == "$trackip" ]
+then
+clear
+
+echo -e '
+\e[1;5;34m
+  __  __ _  ____  __     ____  __  __ _  ____  ____  ____
+ (  )(  ( \(  __)/  \   (  __)(  )(  ( \(    \(  __)(  _ \
+  )( /    / ) _)(  O )   ) _)  )( /    / ) D ( ) _)  )   /
+ (__)\_)__)(__)  \__/   (__)  (__)\_)__)(____/(____)(__\_)
+                                                             \e[0m
+                                                        Coded By CyberGhost                                                                                                                     
+ '
+
+echo -e -n "Enter ip address : "
+read ip
+
+echo
+
+printf '      Ip             :       '
+      curl -s https://ipinfo.io/$ip/json | jq -r '.ip'
+printf '      Country        :       '
+      curl -s https://ipapi.co/$ip//json | jq -r  '.country_name'
+printf '      Region         :       '
+      curl -s https://ipapi.co/$ip//json | jq -r  '.region'
+printf '      City           :       '
+      curl -s https://ipapi.co/$ip//json | jq -r '.city'
+printf '      Postal Code    :       '
+      curl -s https://ipapi.co/$ip//json | jq -r  '.postal'
+echo
+
+printf '      Location       :       '
+      curl -s https://ipinfo.io/$ip/json | jq -r  '.loc'
+
+
+echo
+printf '      Isp            :       '
+     curl -s https://ipinfo.io/$ip/json | jq -r  '.org'
+
+echo
+
+printf '      Timezone       :       '
+     curl -s https://ipinfo.io/$ip/json | jq -r '.timezone'
+printf '      Currency       :       '
+     curl -s https://ipapi.co/$ip//json | jq -r  '.currency'
+printf '      Calling code   :       '
+     curl -s https://ipapi.co/$ip//json | jq -r  '.country_calling_code'
+
+echo
+
+echo -e -n "\e[0;31mReturn To  Menu (Press Enter)\e[0m  "
+read yes
+
+./infofinder
+
+
+read a
+  elif [ "$a" == "$mal" ]
+then
+clear
+
+echo -e '
+\e[1;5;34m
+  __  __ _  ____  __     ____  __  __ _  ____  ____  ____
+ (  )(  ( \(  __)/  \   (  __)(  )(  ( \(    \(  __)(  _ \
+  )( /    / ) _)(  O )   ) _)  )( /    / ) D ( ) _)  )   /
+ (__)\_)__)(__)  \__/   (__)  (__)\_)__)(____/(____)(__\_)
+                                                           \e[0m
+                                                        Coded By CyberGhost 
+ '
+
+echo -e -n "Enter MAC address : "
+read MAC
+
+echo
+
+printf '      Vendor / Company             :       '
+
+curl -s http://api.macvendors.com/$MAC
+
+echo
+echo
+
+echo -e -n "\e[0;31mReturn To  Menu (Press Enter)\e[0m  "
+read yes
+
+./infofinder
+
+
+read a
+elif [ "$a" == "$luwi" ]
+then
+
+clear
+
+echo -e '
+\e[1;5;34m
+  __  __ _  ____  __     ____  __  __ _  ____  ____  ____
+ (  )(  ( \(  __)/  \   (  __)(  )(  ( \(    \(  __)(  _ \
+  )( /    / ) _)(  O )   ) _)  )( /    / ) D ( ) _)  )   /
+ (__)\_)__)(__)  \__/   (__)  (__)\_)__)(____/(____)(__\_)
+                                                              \e[0m
+                                                        Coded By CyberGhost 
+'
+
+echo -e -n "Enter domain name  : "
+read domain
+
+whois $domain
+
+echo
+
+echo -e -n "\e[0;31mReturn To  Menu (Press Enter)\e[0m  "
+read yes
+
+./infofinder
+
+
+read a
+elif [ "$a" == "$ex" ]
+then
+
+
+exit
+
+
+
+
+
+
+
+
+
+
+fi
