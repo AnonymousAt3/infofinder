@@ -30,7 +30,7 @@
      $ bash infofinder
 --------------------------------
 
-<IMG SRC="">
+<IMG SRC="https://github.com/AnonymousAt3/infofinder/blob/main/img/infofinder.gif">
      
      
 #This Script Was Made By @cyberghost
