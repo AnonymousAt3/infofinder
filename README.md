@@ -1,4 +1,4 @@
-# info finder
+# info finder📡
 
 
 # Menu
